@@ -1,0 +1,135 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  background-color: #000000;
+}
+
+.body {
+  background-color: antiquewhite;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  height: 30vh;
+  display: grid;
+  place-items: center;
+}
+
+.flower-container {
+  width: 300px;
+  height: auto;
+  margin-left: 210px;
+  margin-top: 70px;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+}
+
+.flower-petal {
+  position: absolute;
+  width: 80px;
+  height: 120px;
+  background: radial-gradient(#ffc2bd, #ffa49f 50px, #FFFEFC);
+  border-radius: 50% 50% 50% 50%;
+  margin: 2px;
+  transform-origin: bottom center;
+  transition: opacity 0.3s ease;
+}
+
+button {
+  border: solid;
+  width: 120px;
+  height: 40px;
+  border-width: 2px;
+  stroke-width: 2px;
+  background-color: #131217;
+  color: rgb(255, 255, 255);
+  border-radius: 35px;
+  font-size: 16px;
+  cursor: pointer;
+  bottom: 10vh;
+  transform-origin: 50% 50%;
+  margin-top: 30px;
+}
+
+button:hover {
+  color: black;
+  background-color: #FFFEFC;
+  cursor: pointer;
+  transform-origin: center;
+}
+
+.direction {
+  border: none;
+  background-color: transparent;
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.direction:hover {
+  color: pink;
+  background-color: transparent;
+}
+
+h1 {
+  color: #ffffff;
+  margin-top: 10vh;
+  font-size: 25px;
+  word-break: keep-all;
+  text-align: center;
+  transform-origin: center;
+  line-height: 160%;
+}
+
+.handsome {
+  color: pink;
+  animation: blink 1.5s ease-in-out infinite alternate;
+}
+@keyframes blink {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+p {
+  transform-origin: center;
+  color: #ffffff;
+  text-align: center;
+  bottom: 10%;
+  padding-top: 400px;
+}
+
+a {
+  align-items: center;
+  vertical-align: middle;
+  margin-left: 50%;
+  margin-top: 10%;
+  color: pink;
+  font-size: 20pt;
+  font-weight: 700;
+}
+
+.fixed-button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.shelf {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.shelf:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

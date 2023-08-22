@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'>
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <title>그와 내가 이뤄질 확률은?</title>
+    <script>
+        
+        function getRandomPetalCount() {
+            return Math.floor(Math.random() * 10) + 1; 
+        }
+
+        function createFlower() {
+            var flowerContainer = document.getElementById("flowerContainer");
+            flowerContainer.innerHTML = "";
+
+            var petalCount = getRandomPetalCount();
+            var flower = document.createElement("div");
+            flower.className = "flower-container";
+
+            var angle = 360/ petalCount; 
+
+            for (var i = 0; i < petalCount; i++) {
+                var petal = document.createElement("div");
+                petal.className = "flower-petal";
+                petal.style.transform = "rotate(" + i * angle + "deg)";
+
+                flower.appendChild(petal);
+            }
+
+            flowerContainer.appendChild(flower);
+            var petals = flower.querySelectorAll(".flower-petal");
+            var petalCount = petals.length;
+
+            petals.forEach(function(petal, index) {
+                petal.addEventListener("click", function() {
+                    this.style.opacity = 0; 
+                    var remainingPetals = flower.querySelectorAll(".flower-petal:not([style*='opacity: 0'])").length;
+                    var result = document.getElementById("result");
+
+                    var oddIndex = index % 2 === 0 ? index + 1 : index - 1;
+                    var evenIndex = index % 2 === 0 ? index : index - 1;
+
+                    if ((index === 0 || index === petalCount - 1) && remainingPetals === 1) {
+                        result.innerHTML = "그는 날 좋아한다";
+                    } else if ((index === oddIndex && remainingPetals % 2 === 1) || (index === evenIndex && remainingPetals % 2 === 0)) {
+                        result.innerHTML = "그는 날 좋아한다";
+                    } else {
+                        result.innerHTML = "그는 날 안 좋아한다";
+                    }
+                });
+            });
+        }
+
+
+    </script>
+    <link href="/love/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+</head>
+<body>
+
+<div class="wrapper">
+
+
+    <h1> 꽃을 생성한 다음, 꽃잎을 <span class="handsome">천천히</span> 클릭하여<br>그가 나를 좋아하는지 확인하세요.</h1>
+    
+        
+
+    
+       
+    
+    <button onclick="createFlower()">꽃 생성하기</button>
+    <div id="flowerContainer"></div>
+    <p id="result"></p>
+
+</div>
+<div class="fixed-button" onclick="location.href='../index.html'">
+    <img src="bookshelf.svg" alt="shelf" style="width:40px" class="shelf">
+ </div>
+</body>
+</html>
+
+</body>
+</html>

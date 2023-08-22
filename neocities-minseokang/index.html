@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>민서책방</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+
+	<script>
+		(function(d) {
+		  var config = {
+			kitId: 'upp7fqz',
+			scriptTimeout: 3000,
+			async: true
+		  },
+		  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		})(document);
+	</script>
+
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="book one"onclick="location.href='/aboutminseo/about.html';">
+			<img src="book_asset/bookone_hover.svg" alt="one" class="nonecolor_one">
+			<img src="book_asset/bookone.svg" alt="one" class="color_one">
+		</div>
+
+		<div class="book two"onclick="location.href='/interview/index.html';">
+			<img src="book_asset/booktwo_hover.svg" alt="two" class="nonecolor_two">
+			<img src="book_asset/booktwo.svg" alt="two" class="color_two">
+
+		</div>
+
+		<div class="book three" onclick="location.href='/week5/newindex.html';">
+
+			<img src="book_asset/bookthree_hover.svg" alt="three" class="nonecolor_three">
+			<img src="book_asset/bookthree.svg" alt="three" class="color_three">
+			
+
+				
+		</div>
+		<div class="book four" onclick= "window.open('https://calligrafixel.github.io/GaNaDaRa7th/')">
+
+			<img src="book_asset/bookfour_hover.svg" alt="four" class="nonecolor_four">
+			<img src="book_asset/bookfour.svg" alt="four" class="color_four">
+			
+
+				
+		</div>
+
+		<div class="book five" onclick="alert('🚨이 책은 강민서의 아이디어 노트로, 영업 비밀입니다!')">
+
+			<img src="book_asset/bookfive_hover.svg" alt="five" class="nonecolor_five">
+			<img src="book_asset/bookfive.svg" alt="five" class="color_five">
+			
+
+				
+		</div>
+
+		<div class="book six" onclick="window.open('https://www.instagram.com/typeandletter_/')">
+
+			<img src="book_asset/booksix_hover.svg" alt="six" class="nonecolor_six">
+			<img src="book_asset/booksix.svg" alt="six" class="color_six">
+			
+
+				
+		</div>
+
+		<div class="book eight" onclick="location.href='/love/love.html';">
+
+			<img src="book_asset/bookeight_hover.svg" alt="eight" class="nonecolor_eight">
+			<img src="book_asset/bookeight.svg" alt="eight" class="color_eight">
+			
+
+				
+		</div>
+
+		<div class="book seven" onclick="location.href='/introduce/introduce.html'">
+
+			<img src="book_asset/bookseven_hover.svg" alt="seven" class="nonecolor_seven">
+			<img src="book_asset/bookseven.svg" alt="seven" class="color_seven">
+			
+
+				
+		</div>
+	</div>
+
+
+
+
+<script>
+
+function adjustBox() {
+			const book_three = document.querySelector('.book.three');
+			const book_four = document.querySelector('.book.four')
+			const windowWidth = window.innerWidth;
+			const windowHeight = window.innerHeight;
+
+
+			if (windowWidth <= 1500) {
+				const rotateDegree = 35 * (windowWidth / 1500);
+				book_three.style.transform = `rotate(${rotateDegree}deg)`;
+
+			} else {
+				book_three.style.transform = 'rotate(35deg)';
+
+			}
+		}
+
+			window.addEventListener("resize", function() {
+			var width = window.innerWidth;
+			var marginLeft = "2vw"; 
+			if (width < 1500) {
+			marginLeft =  - (1500 - width) * 0.8 + "vw"; 
+			}
+			document.querySelector(".book_three").style.marginLeft = marginLeft;
+		});
+
+		
+
+
+		adjustBox();
+		window.addEventListener('resize', adjustBox);
+		
+</script>
+
+
+
+
+</body>
+</html>
+
+
+	

@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  padding: 2vw;
+  font-family: "Pretendard";
+  line-height: 160%;
+  font-weight: 500;
+}
+
+.contents {
+  font-size: 1rem;
+}
+
+summary {
+  cursor: pointer;
+  outline: none;
+}
+
+.birth a {
+  color: #757575;
+}
+
+.interest a {
+  color: #757575;
+}
+
+.four a {
+  color: #9e9e9e;
+}
+
+.plus a {
+  color: #757575;
+}
+
+img {
+  position: fixed;
+  right: 170px;
+  bottom: 90px;
+}
+
+.donut {
+  animation: rotate_image 6s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes rotate_image {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.one {
+  left: 20px;
+  color: #424242;
+  padding: 5px;
+}
+
+.two {
+  left: 30px;
+  color: #616161;
+  padding: 5px;
+}
+
+.three {
+  left: 40px;
+  color: #757575;
+  padding: 5px;
+}
+
+.four {
+  left: 40px;
+  color: #9e9e9e;
+  padding: 5px;
+}/*# sourceMappingURL=introduction_style.css.map */
